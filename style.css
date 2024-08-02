@@ -5,33 +5,59 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: rgb(251, 233, 208);
-  background: linear-gradient(rgb(36, 72, 86) 0%, rgb(144, 174, 173) 5%, rgb(144, 174, 173) 95%, rgb(36, 72, 86) 100%)
+  background: linear-gradient(rgb(36, 72, 86) 0%, rgb(144, 174, 173) 5%, rgb(144, 174, 173) 95%, rgb(135, 79, 65) 100%)
 }
 
 #firstName {
   font-weight: 800;
-  font-size: 16em;
+  font-size: 14em;
   text-align: center;
-  margin-bottom: -80px;
+  margin-bottom: -0.3em;
 }
 
 #lastName {
   font-weight: 800;
-  font-size: 16em;
-  padding-left: 20%;
-  text-align: center;
+  font-size: 14em;
+  margin-top: -0.3em;
 }
 
 #floatingText {
   width: 80%;
-  height:80px;
-  margin-left:10%;
-  margin-right:10%;
-  font-size: 3em;
-  display:flex;
+  height: 1.3em;
+  margin-left: 10%;
+  margin-right: 20%;
+  font-size: 2.8em;
+  display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(144, 174, 173);
   background-color: rgb(251, 233, 208);
-  
+}
+
+#letterBase {
+  width: 1.3em;
+  height: 4em;
+  font-size: 2.8em;
+  color: rgb(144, 174, 173);
+  position: absolute;
+  background-color: rgb(251, 233, 208);
+  margin-right:850px;
+  margin-bottom:100px;
+}
+
+#bottomWrapper {
+  /* transform: translate3d(); */
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.nameSection {
+  min-width: 1200px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
