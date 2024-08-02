@@ -63,7 +63,7 @@ body {
   color: rgb(144, 174, 173);
   position: absolute;
   background-color: rgb(251, 233, 208);
-  /* margin-right: 850px; */
+  margin-right: 850px;
   margin-bottom: 92px;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .nameSection {
-  min-width: 1200px;
+  /* min-width: 1200px; */
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
