@@ -15,23 +15,23 @@ body {
 
 #firstName {
   font-weight: 800;
-  font-size: 14em;
+  font-size: 10em;
   text-align: center;
   margin-bottom: -0.3em;
 }
 
 #lastName {
   font-weight: 800;
-  font-size: 14em;
+  font-size: 10em;
   margin-top: -0.3em;
 }
 
 #floatingText {
-  width: 80%;
+  width: 60%;
   height: 1.3em;
-  margin-left: 10%;
+  margin-left: 20%;
   margin-right: 20%;
-  font-size: 2.5em;
+  font-size: 1.8em;
   padding: 5px 0 5px 0;
   display: flex;
   justify-content: center;
@@ -57,14 +57,14 @@ body {
 }
 
 #letterBase {
-  width: 1.2em;
-  height: 4.1em;
+  width: 0.9em;
+  height: 3em;
   font-size: 2.8em;
   color: rgb(144, 174, 173);
   position: absolute;
   background-color: rgb(251, 233, 208);
-  margin-right: 850px;
-  margin-bottom: 92px;
+  margin-right: 600px;
+  margin-bottom: 67px;
 }
 
 #bottomWrapper {
@@ -78,7 +78,7 @@ body {
 }
 
 .nameSection {
-  /* min-width: 1200px; */
+  min-width: 70em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
