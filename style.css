@@ -5,7 +5,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: rgb(251, 233, 208);
-  background: linear-gradient(rgb(36, 72, 86) 0%, rgb(144, 174, 173) 5%, rgb(144, 174, 173) 95%, rgb(135, 79, 65) 100%)
+  background: linear-gradient(rgb(36, 72, 86) 0%, rgb(144, 174, 173) 5%, rgb(144, 174, 173) 95%, rgb(36, 72, 86) 100%)
 }
 
 #firstName {
@@ -26,12 +26,29 @@ body {
   height: 1.3em;
   margin-left: 10%;
   margin-right: 20%;
-  font-size: 2.8em;
+  font-size: 2.5em;
+  padding: 5px 0 5px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(144, 174, 173);
   background-color: rgb(251, 233, 208);
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+#floatingText p {
+  animation: LeftToRight 100s infinite linear;
+}
+
+@keyframes LeftToRight {
+  from {
+    transform: translateX(-45%)
+  }
+
+  to {
+    transform: translateX(5%)
+  }
 }
 
 #letterBase {
@@ -41,8 +58,8 @@ body {
   color: rgb(144, 174, 173);
   position: absolute;
   background-color: rgb(251, 233, 208);
-  margin-right:850px;
-  margin-bottom:100px;
+  margin-right: 850px;
+  margin-bottom: 90px;
 }
 
 #bottomWrapper {
@@ -62,4 +79,14 @@ body {
   padding-bottom: 0.5em;
 }
 
-/* hello */
+.scroll {
+  white-space: nowrap;
+  margin: 0 2em;
+}
+
+.scroll div {
+  display: flex;
+  gap: 2em;
+}
+
+.scroll p {}
