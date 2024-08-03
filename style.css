@@ -19,6 +19,10 @@ a {
   z-index: 2;
 }
 
+strong {
+  color: rgb(36, 72, 85);
+}
+
 a:hover {
   color: rgb(36, 72, 85);
 }
@@ -111,7 +115,7 @@ body {
 .nameSection {
   min-width: 600px;
   padding-top: 0.5em;
-  padding-bottom: 8em;
+  padding-bottom: 4em;
   z-index: 0;
   position: relative;
 }
@@ -138,11 +142,39 @@ body {
   opacity: 0;
   text-align: center;
   font-size: 3em;
-  margin-bottom: 10em;
-  padding-bottom: 3em;
+  padding-bottom: 4em;
   animation: PointDown 2s infinite;
   animation-delay: 5s;
 }
+
+/* MAIN BODY */
+
+#mainContent {
+  padding: 2em 15% 2.2em 15%;
+}
+
+.animate {
+  opacity: 0;
+}
+
+.introductionTitle {
+  display:inline-block;
+  font-size: 4em;
+}
+
+.introductionTitle.inView {
+  animation: Appear 1s ease-in-out forwards;
+}
+
+.introduction {
+  display:inline-block;
+}
+
+.introduction.inView {
+  animation: Appear 1s ease-in-out forwards;
+}
+
+/* KEYFRAMES */
 
 @keyframes RightToLeft {
   from {
@@ -197,21 +229,14 @@ body {
   }
 }
 
-/* MAIN BODY */
+@keyframes Appear {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
 
-#mainContent {
-  padding: 2em 10em 2em 10em;
-}
-
-.animate {
-  opacity: 0;
-  transition: 1s ease-in-out;
-}
-
-.animate.visible {
-  opacity: 1;
-}
-
-.no-animation {
-  animation: none;
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }

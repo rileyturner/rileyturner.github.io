@@ -1,23 +1,27 @@
-document.addEventListener('scroll', function() {
-  let element = document.querySelector('.animate');
-  let elementPosition = element.getBoundingClientRect().top;
-  let viewportHeight = window.innerHeight;
+document.addEventListener("DOMContentLoaded", () => {
+  let observor = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('inView');
+        return;
+      }
+    })
+  });
 
+  let allElements = document.querySelectorAll('.animate');
+  allElements.forEach((element) => observor.observe(element));
+})
+
+document.addEventListener('scroll', function () {
   let scrollPosition = window.scrollY || window.pageYOffset;
 
   let arrowElement = document.getElementById('arrow');
 
   if (scrollPosition > 100) {
-    console.log ("SCROLL DETECTED");
+    console.log("SCROLL DETECTED");
     arrowElement.style.animation = 'none';
   } else {
     console.log("PAGE AT THE TOP")
     arrowElement.style.animation = '';
-  }
-
-  if (elementPosition < viewportHeight) {
-      element.classList.add('visible');
-  } else {
-      element.classList.remove('visible');
   }
 });
