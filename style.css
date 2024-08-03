@@ -150,7 +150,7 @@ body {
 /* MAIN BODY */
 
 #mainContent {
-  padding: 2em 15% 2.2em 15%;
+  padding: 2em 20% 2.2em 20%;
 }
 
 .animate {
@@ -262,8 +262,8 @@ body {
   opacity: 0;
   color: white;
   margin-bottom: 0.2em;
-  top: -2.5em;
-  left: 0;
+  margin-left:100px;text-align: right;
+  right: 0;
   position: absolute;
   display: inline-block;
 }
