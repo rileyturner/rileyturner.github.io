@@ -32,6 +32,8 @@ body {
 
 #topWrapper {
   text-align: center;
+  top: 50%;
+  animation: ExpandDown 4s;
 }
 
 #firstName {
@@ -45,6 +47,24 @@ body {
   font-weight: 800;
   font-size: 10em;
   margin-top: -0.3em;
+}
+
+#letterBase {
+  width: 0.7em;
+  height: 3em;
+  font-size: 2.8em;
+  color: rgb(144, 174, 173);
+  position: absolute;
+  background-color: rgb(251, 233, 208);
+  margin-right: 600px;
+  margin-bottom: 22px;
+}
+
+.scroll {
+  width: 100%;
+  margin-left: 15%;
+  margin-right: 15%;
+  white-space: nowrap;
 }
 
 #floatingText {
@@ -67,17 +87,6 @@ body {
   animation: RightToLeft 100s infinite linear;
 }
 
-#letterBase {
-  width: 0.9em;
-  height: 3em;
-  font-size: 2.8em;
-  color: rgb(144, 174, 173);
-  position: absolute;
-  background-color: rgb(251, 233, 208);
-  margin-right: 600px;
-  margin-bottom: 67px;
-}
-
 #bottomWrapper {
   box-sizing: border-box;
   text-align: center;
@@ -85,28 +94,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 100px;
+  margin-left:50px;
+  animation: ExpandDown 2s;
 }
 
 .nameSection {
-  overflow: hidden;
-}
-
-.nameSection::before {
-  padding-top: -5em;
-  padding-bottom: -5em;
-  transition: 1s ease-in-out;
-}
-
-.nameSection::after {
   min-width: 600px;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-}
-
-.scroll {
-  white-space: nowrap;
-  margin: 0 2em;
 }
 
 .scroll div {
@@ -128,10 +123,19 @@ body {
 
 @keyframes RightToLeft {
   from {
-    transform: translateX(0%)
+    transform: translateX(10%)
   }
 
   to {
-    transform: translateX(-50%)
+    transform: translateX(-40%)
+  }
+}
+
+@keyframes ExpandDown {
+  from {
+    transform: translateY(-150%)
+  }
+  to {
+    transform: translateY(0%);
   }
 }
