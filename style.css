@@ -33,7 +33,9 @@ body {
 #topWrapper {
   text-align: center;
   top: 50%;
-  animation: ExpandDown 4s;
+  animation: ExpandDown 2s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
 }
 
 #firstName {
@@ -50,13 +52,13 @@ body {
 }
 
 #letterBase {
-  width: 0.7em;
-  height: 3em;
+  width: 0.8em;
+  height: 2.98em;
   font-size: 2.8em;
   color: rgb(144, 174, 173);
   position: absolute;
   background-color: rgb(251, 233, 208);
-  margin-right: 600px;
+  margin-right: 536px;
   margin-bottom: 22px;
 }
 
@@ -81,6 +83,7 @@ body {
   background-color: rgb(251, 233, 208);
   overflow: hidden;
   border-radius: 15px;
+  animation: ExpandOutwards 3s;
 }
 
 #floatingText p {
@@ -95,7 +98,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-left:50px;
-  animation: ExpandDown 2s;
+  animation: ExpandDown 2s forwards;
 }
 
 .nameSection {
@@ -133,9 +136,20 @@ body {
 
 @keyframes ExpandDown {
   from {
-    transform: translateY(-150%)
+    transform: translateY(-150%);
+    opacity:0;
   }
   to {
     transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes ExpandOutwards {
+  from {
+    width: 20%;
+  }
+  to {
+    width: 70%;
   }
 }
