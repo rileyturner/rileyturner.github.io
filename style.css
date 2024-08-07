@@ -151,7 +151,10 @@ body {
 
 #mainContent {
   padding: 2em 15% 2.2em 15%;
+  position: absolute;
 }
+
+/* ABOUT ME */
 
 .animate {
   opacity: 0;
@@ -175,6 +178,8 @@ body {
   animation: Appear 1s ease-in-out forwards;
 }
 
+/* EXPERIENCE */
+
 .experience {
   display: inline-block;
 }
@@ -185,8 +190,8 @@ body {
 
 .timeline {
   position: relative;
-  margin: 100px auto;
-  display:block;
+  margin: 4em auto;
+  display: block;
   width: 100%;
   opacity: 1;
 }
@@ -252,34 +257,19 @@ body {
   right: 92%;
 }
 
-/* .timeline::after {
-  content: '';
-  position: relative;
-  width: 6px;
-  height: 100%;
-  background: whitesmoke;
-  opacity: 1;
-  top: 0;
-  left: 50%;
-  margin-left: -3px;
-  height:100%;
-  display:block;
-} */
-
 .centerLine {
   width: 6px;
   height: 0;
   background-color: whitesmoke;
-  display:inline;
+  display: inline;
   position: absolute;
   z-index: -1;
-  left:50%;
+  left: 50%;
   opacity: 1;
 }
 
-
 .centerLine.inView {
-  animation: GrowDown 10s ease-in-out forwards;
+  animation: GrowDown 7s ease-in-out forwards;
 }
 
 .timelineContent small {
@@ -416,6 +406,83 @@ body {
 .segTitle2.inView {
   animation: SlideRight 2.5s ease-in-out forwards;
   animation-delay: 0.5s;
+}
+
+/* SKILLS */
+
+.skills {
+  opacity: 1;
+  display: block;
+}
+
+.skills .title {
+  text-align: center;
+  display: block;
+}
+
+.skillBox {
+  width: 100%;
+  height: 100%;
+}
+
+.rowSkill {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+.skill {
+  height: 20em;
+  margin: 1%;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.skillPic {
+  background: linear-gradient(to right, rgb(54, 108, 128) 50%, rgb(63, 128, 151) 50%);
+  z-index: 1;
+  margin-top: 1em;
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.skillPic img {
+  width: 60%;
+  height: 60%;
+  justify-content: center;
+}
+
+.skillName {
+  width: 80%;
+  height: 2em;
+  top: 45%;
+  position: relative;
+  display: block;
+  text-align: center;
+  z-index: 0;
+}
+
+.skillName h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.skillContent {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  top:65%;
+  margin-top:1em;
+  position: relative;
+  display: block;
 }
 
 /* EDUCATION */
