@@ -267,9 +267,9 @@ body {
 } */
 
 .centerLine {
-  width: 10px;
+  width: 6px;
   height: 0;
-  background-color: gainsboro;
+  background-color: whitesmoke;
   display:inline;
   position: absolute;
   z-index: -1;
