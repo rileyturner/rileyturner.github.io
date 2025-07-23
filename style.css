@@ -35,6 +35,7 @@ body {
   background: rgb(144, 174, 173);
   background-color: rgb(144, 174, 173);
   z-index: 0;
+  margin: 0;
 }
 
 #topWrapper {
@@ -74,7 +75,7 @@ body {
 }
 
 .scroll {
-  width: 100%;
+  width: 80%;
   margin-left: 15%;
   margin-right: 15%;
   white-space: nowrap;
@@ -127,7 +128,7 @@ body {
 
 .links {
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   top: 2em;
   left: 2em;
   padding: 0;
@@ -150,8 +151,9 @@ body {
 /* MAIN BODY */
 
 #mainContent {
-  padding: 2em 15% 2.2em 15%;
+  padding: 2em 20% 2.2em 20%;
   position: absolute;
+  background-color: #9BB0AF;
 }
 
 /* ABOUT ME */
@@ -163,7 +165,7 @@ body {
 .title {
   display: inline-block;
   font-size: 5em;
-  padding: 1em 0 1em 0;
+  padding-top: 1em;
 }
 
 .title.inView {
@@ -172,6 +174,7 @@ body {
 
 .introduction {
   display: inline-block;
+  background-color: #9BB0AF;
 }
 
 .introduction.inView {
@@ -187,7 +190,7 @@ body {
 .timeline {
   position: relative;
   max-width: 1200px;
-  margin: 100px auto;
+  margin: 50px auto;
 }
 
 .timeline.inView {
@@ -203,7 +206,7 @@ body {
   top: 0;
   left: 50%;
   margin-left: -3px;
-  z-index: -1;
+  z-index: 0;
 }
 
 .timeline.inView::after {
@@ -215,6 +218,7 @@ body {
   position: relative;
   width: 50%;
   opacity: 0;
+  z-index: 1;
 }
 
 .container.inView {
@@ -250,12 +254,11 @@ body {
   border-radius: 50%;
   top: 30px;
   background-color: whitesmoke;
-  z-index: 3;
   right: -25px
 }
 
 .right-container img {
-  left: -25px
+  left: -25px;
 }
 
 .text-box h2 {
@@ -301,12 +304,51 @@ body {
 }
 
 .container:nth-child(4) {
-  animation-delay: 4.5s;
+  animation-delay: 4.7s;
 }
 
 /* PROJECTS */
 
+/* MISC. */
 
+.custom-shape-divider-top-1753285007 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 3;
+}
+
+.custom-shape-divider-top-1753285007 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.custom-shape-divider-top-1753285007 .shape-fill {
+    fill: #90AEAD;
+}
+
+.custom-shape-divider-top-1753285799 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1753285799 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 138px;
+}
+
+.custom-shape-divider-top-1753285799 .shape-fill {
+    fill: #9BB0AF;
+}
 
 /* KEYFRAMES */
 
