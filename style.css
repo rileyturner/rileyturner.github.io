@@ -468,7 +468,7 @@ body {
 
   .right-container-arrow,
   .left-container-arrow {
-    border-right: 15px solid #fff;
+    border-right: 15px solid rgb(253, 244, 231);
     border-left: 0;
     left: -15px
   }
