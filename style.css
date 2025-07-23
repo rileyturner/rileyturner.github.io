@@ -180,104 +180,95 @@ body {
 
 /* EXPERIENCE */
 
-.experience {
-  display: inline-block;
-}
-
 .experience.inView {
   animation: Appear 1s ease-in-out forwards;
 }
 
 .timeline {
   position: relative;
-  margin: 4em auto;
-  display: block;
-  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.timeline.inView {
   opacity: 1;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+}
+
+.timeline.inView::after {
+  animation: moveline 6s linear forwards;
 }
 
 .container {
   padding: 10px 50px;
   position: relative;
-  width: 40%;
+  width: 50%;
+  opacity: 0;
 }
 
-.timelineContent {
+.container.inView {
+  animation: movedown 1s linear forwards;
+}
+
+.text-box {
+  background: rgb(253, 244, 231);
   padding: 20px 30px;
-  background: rgb(36, 72, 85);
   position: relative;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 15px;
+  color: rgb(36, 72, 85);
 }
 
-.leftContainer {
+.left-container {
   left: 0;
   width: 50%;
   box-sizing: border-box;
   position: relative;
 }
 
-.rightContainer {
+.right-container {
   left: 50%;
   width: 50%;
   box-sizing: border-box;
   position: relative;
 }
 
-.left1.inView {
-  animation: SlideRight 2s ease-in-out forwards;
-  animation-delay: 2s;
-}
-
-.right1.inView {
-  animation: SlideLeft 2s ease-in-out forwards;
-  animation-delay: 3s;
-}
-
-.left2.inView {
-  animation: SlideRight 2s ease-in-out forwards;
-  animation-delay: 4s;
-}
-
 .container img {
   position: absolute;
-  width: 3em;
+  width: 50px;
   border-radius: 50%;
-  top: 32px;
+  top: 30px;
   background-color: whitesmoke;
   z-index: 3;
-  padding: 5px;
+  right: -25px
 }
 
-.leftContainer img {
-  left: 92%;
+.right-container img {
+  left: -25px
 }
 
-.rightContainer img {
-  right: 92%;
+.text-box h2 {
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 
-.centerLine {
-  width: 6px;
-  height: 0;
-  background-color: whitesmoke;
-  display: inline;
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  opacity: 1;
-}
-
-.centerLine.inView {
-  animation: GrowDown 7s ease-in-out forwards;
-}
-
-.timelineContent small {
+.text-box small {
   display: inline-block;
-  margin-bottom: 1em;
+  margin-bottom: 15px;
 }
 
-.leftContainerArrow {
+.left-container-arrow {
   height: 0;
   width: 0;
   position: absolute;
@@ -285,11 +276,11 @@ body {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid rgb(36, 72, 85);
+  border-left: 15px solid rgb(253, 244, 231);
   left: 100%;
 }
 
-.rightContainerArrow {
+.right-container-arrow {
   height: 0;
   width: 0;
   position: absolute;
@@ -297,200 +288,25 @@ body {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid rgb(36, 72, 85);
+  border-right: 15px solid rgb(253, 244, 231);
   right: 100%;
 }
 
-.seg1,
-.seg2,
-.seg3 {
-  opacity: 0;
-  width: 3em;
-  height: 33%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: 0.5s ease-in-out;
+.container:nth-child(2) {
+  animation-delay: 1.5s;
 }
 
-.seg1 {
-  background-color: rgb(200, 225, 221);
-  z-index: 0;
+.container:nth-child(3) {
+  animation-delay: 3s;
 }
 
-.seg2 {
-  background-color: rgb(96, 130, 140);
-  z-index: 0;
+.container:nth-child(4) {
+  animation-delay: 4.5s;
 }
 
-.seg3 {
-  background-color: rgb(36, 72, 85);
-  z-index: 0;
-}
+/* PROJECTS */
 
-.seg1Content,
-.seg3Content {
-  opacity: 0;
-  background-color: whitesmoke;
-  height: 1em;
-  width: 50%;
-  display: inline-block;
-  margin-left: 15em;
-  position: relative;
-}
 
-.seg2Content {
-  opacity: 0;
-  background-color: whitesmoke;
-  height: 1em;
-  width: 50%;
-  display: inline-block;
-  margin-right: 15em;
-  position: relative;
-}
-
-.seg1.inView,
-.seg2.inView,
-.seg3.inView {
-  animation: Appear 1s ease-in-out forwards;
-  animation-delay: 0.5s;
-}
-
-.seg1Content.inView,
-.seg3Content.inView {
-  animation: SlideLeft 2.5s ease-in-out forwards;
-  animation-delay: 0.5s;
-}
-
-.seg2Content.inView {
-  animation: SlideRight 2.5s ease-in-out forwards;
-  animation-delay: 0.5s;
-}
-
-.segTitle1 {
-  opacity: 0;
-  color: white;
-  margin-bottom: 0.2em;
-  margin-left: 100px;
-  text-align: right;
-  right: 0;
-  position: absolute;
-  display: inline-block;
-}
-
-.segTitle2 {
-  opacity: 0;
-  color: white;
-  margin-right: 20em;
-  margin-bottom: 0.2em;
-  position: absolute;
-  display: inline;
-}
-
-.segTitle3 {
-  opacity: 0;
-  color: white;
-  margin-bottom: 0.2em;
-  top: -2.5em;
-  right: 0;
-  position: absolute;
-  display: inline-block;
-}
-
-.segTitle1.inView,
-.segTitle3.inView {
-  animation: SlideLeft 2.5s ease-in-out forwards;
-  animation-delay: 0.5s;
-}
-
-.segTitle2.inView {
-  animation: SlideRight 2.5s ease-in-out forwards;
-  animation-delay: 0.5s;
-}
-
-/* SKILLS */
-
-.skills {
-  opacity: 1;
-  display: block;
-}
-
-.skills .title {
-  text-align: center;
-  display: block;
-}
-
-.skillBox {
-  width: 100%;
-  height: 100%;
-}
-
-.rowSkill {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  width: 100%;
-}
-
-.skill {
-  height: 20em;
-  margin: 1%;
-  width: 35%;
-  display: flex;
-  justify-content: center;
-}
-
-.skillPic {
-  background: linear-gradient(to right, rgb(54, 108, 128) 50%, rgb(63, 128, 151) 50%);
-  z-index: 1;
-  margin-top: 1em;
-  width: 8em;
-  height: 8em;
-  border-radius: 50%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-}
-
-.skillPic img {
-  width: 60%;
-  height: 60%;
-  justify-content: center;
-}
-
-.skillName {
-  width: 80%;
-  height: 2em;
-  top: 45%;
-  position: relative;
-  display: block;
-  text-align: center;
-  z-index: 0;
-}
-
-.skillName h2 {
-  text-align: center;
-  margin: 0;
-}
-
-.skillContent {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  top:65%;
-  margin-top:1em;
-  position: relative;
-  display: block;
-}
-
-/* EDUCATION */
-
-.education {
-  margin-top: 3em;
-  display: block;
-}
 
 /* KEYFRAMES */
 
@@ -583,12 +399,77 @@ body {
   }
 }
 
-@keyframes GrowDown {
+@keyframes moveline {
   from {
     height: 0%;
   }
 
   to {
     height: 100%;
+  }
+}
+
+@keyframes movedown {
+  from {
+    opacity: 1;
+    transform: translateY(-10%)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%)
+  }
+}
+
+/* MOBILE PHONE DISPLAY SETTINGS */
+
+@media screen and (max-width: 1100px) {
+  /* INTRODUCTION */
+  /* .links {
+    top: 1.5em;
+    left: 10%;
+  }
+
+  .links li {
+    display: block;
+  } */
+
+  /* EXPERIENCE SECTION */
+  .timeline {
+    margin: 50px auto;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+
+  .text-box {
+    font-size: 18px;
+  }
+
+  .text-box small {
+    margin-bottom: 10px;
+  }
+
+  .right-container {
+    left: 0;
+  }
+
+  .left-container img,
+  .right-container img {
+    left: 6px;
+  }
+
+  .right-container-arrow,
+  .left-container-arrow {
+    border-right: 15px solid #fff;
+    border-left: 0;
+    left: -15px
   }
 }
