@@ -50,6 +50,11 @@ html {
   width: 100%;
 }
 
+#menu-home {
+  position: relative;
+  top: 30%;
+}
+
 .nav-left {
   position: fixed;
   top: 2em;
@@ -79,6 +84,8 @@ html {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -241,7 +248,7 @@ body {
 #intro {
   display: inline-block;
   background-color: #9BB0AF;
-  padding: 2em 20% 2.2em 20%;
+  padding: 2em 20% 6em 20%;
 }
 
 .introduction.inView {
@@ -403,22 +410,23 @@ body {
     fill: #749695;
 }
 
-.custom-shape-divider-top-1753335444 {
+.custom-shape-divider-top-1753371668 {
     position: absolute;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    transform: rotate(180deg);
 }
 
-.custom-shape-divider-top-1753335444 svg {
+.custom-shape-divider-top-1753371668 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 70px;
+    height: 67px;
 }
 
-.custom-shape-divider-top-1753335444 .shape-fill {
+.custom-shape-divider-top-1753371668 .shape-fill {
     fill: #9BB0AF;
 }
 
