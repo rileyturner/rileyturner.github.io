@@ -53,3 +53,22 @@ document.addEventListener('scroll', function () {
     arrowElement.style.animation = '';
   }
 });
+
+let isToggled = false
+function openNav() {
+  let line1 = document.getElementsByClassName("line1")[0]
+  let line2 = document.getElementsByClassName("line2")[0]
+  let navbar = document.getElementsByClassName("navbar")[0]
+
+  if (!isToggled) {
+    line1.style.transform = "rotate(45deg) translateX(6px)"
+    line2.style.transform = "rotate(-45deg) translateX(6px)"
+    isToggled = true
+  } else {
+    line1.style.transform = ""
+    line2.style.transform = ""
+    isToggled = false
+  }
+
+  navbar.classList.toggle('active-menu');
+}
