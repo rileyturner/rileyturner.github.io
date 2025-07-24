@@ -16,18 +16,34 @@
 
 <body>
 
-  <nav>
-    <ul class="links">
-      <li>
-        <a href="https://www.linkedin.com/in/riley-turner-b55089285/"><i class="fa-brands fa-linkedin-in"></i></a>
-      </li>
-      <li>
-        <a href="https://github.com/Viydal"><i class="fa-brands fa-github"></i></a>
-      </li>
-    </ul>
+  <nav class="navbar">
+    <div class="nav-left">
+      <ul class="social-links">
+        <li>
+          <a href="https://www.linkedin.com/in/riley-turner-b55089285/"><i class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/Viydal"><i class="fa-brands fa-github"></i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <ul class="page-location">
+        <li>
+          <a href="#intro"><h2>HOME</h2></a>
+        </li>
+        <li>
+          <a href="#intro"><h2>HOME</h2></a>
+        </li>
+        <li>
+          <a href="#intro"><h2>HOME</h2></a>
+        </li>
+      </ul>
+    </div>
+    
   </nav>
 
-  <div class="nameSection">
+  <div id="nameSection">
     <div id="topWrapper">
       <div id="firstName">RILEY</div>
     </div>
@@ -50,15 +66,14 @@
   </div>
   <div id="arrow"><i class="fa-solid fa-arrow-down"></i></div>
 
-  <div class="custom-shape-divider-top-1753285007">
+  <div class="custom-shape-divider-top-1753335391">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z" class="shape-fill">
-      </path>
+        <path d="M602.45,3.86h0S572.9,116.24,281.94,120H923C632,116.24,602.45,3.86,602.45,3.86Z" class="shape-fill"></path>
     </svg>
   </div>
 
   <div id="mainContent">
-    <div class="introduction">
+    <div id="intro">
       <h1 class="animate title"><strong>A little about me...</strong></h1>
       <h2 class="animate introduction">
         Hey! my name's Riley! I'm a 20-year-old student studying computer science at the University of Adelaide,
@@ -75,14 +90,14 @@
         In <strong>2023</strong>, I began my bachelor's degree in computer science, majoring in <strong>Artificial
           Intelligence and Machine Learning</strong>. This degree was my first real introduction to computer science
         concepts like <strong>cyber security,
-          object-oriented programming, and software engineering</strong>. By the end of the year, I had developed a 2D
+          object-oriented programming,</strong> and <strong>software engineering</strong>. By the end of the year, I had developed a 2D
         RPG-style
         game within C++, and blackjack within MATLAB.
       </h2>
 
       <h2 class="animate introduction">
         By <strong>2024</strong>, I had deepened my understanding of computer internals down to the chip level, as well
-        as expanded my knowledge in relation to the production and hosting of both <strong>static and dynamic web
+        as expanded my knowledge in relation to the production and hosting of both <strong>static</strong> and <strong> dynamic web
           pages</strong>. This
         page is a testament to said understanding.
       </h2>
@@ -90,9 +105,8 @@
       <h2 class="animate introduction">
         In <strong>2025</strong>, I began to take courses that were far more specific to my major, specifically that of
         <strong>artificial intelligence,
-          computer vision, and cyber security</strong>. With some free time on my hands I began to work on some small
-        passion projects like a <strong>Twitch and Discord bot</strong>,
-        that I will mention in more detail a little later.
+          computer vision,</strong> and <strong>cyber security</strong>. With some free time on my hands, I began to work on some small
+        passion projects such as a <strong>Discord bot</strong> and <strong>an automated Twitch engagement bot</strong>. Both projects are covered within the Projects section.
       </h2>
 
       <h2 class="animate introduction">
@@ -102,14 +116,14 @@
       </h2>
     </div>
 
-    <!-- <div class="custom-shape-divider-top-1753285799">
+    <div class="custom-shape-divider-top-1753335444">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+          <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z" class="shape-fill"></path>
       </svg>
-    </div> -->
+    </div>
 
-    <h1 class="animate title"><strong>Experience</strong></h1>
-    <div class="animate timeline">
+    <h1 class="animate title" id="experience-title"><strong>Experience</strong></h1>
+    <div class="animate timeline" id="experience">
 
       <div class="container left-container">
         <img src="images/mcdonalds_corporation_logo.jpg" alt="McDonald's logo image">
@@ -160,9 +174,8 @@
       </div>
 
     </div>
-    <svg></svg>
     <h1 class="animate title"><strong>Some previous projects</strong></h1>
-    <div class="animate projects">
+    <div class="animate" id="projects">
 
     </div>
   </div>

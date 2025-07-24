@@ -5,8 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
         entry.target.classList.add('inView');
         return;
       }
-    })
-  });
+    });
+  },
+  {
+    rootMargin: "0px 0px -250px 0px"
+  }
+  );
 
   let allElements = document.querySelectorAll('.animate');
   allElements.forEach((element) => observor.observe(element));
@@ -26,10 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
           observor.unobserve(entry.target); // Stop observing after first trigger
         }
       });
-    });
-
-    IntersectionObserver.thresholds
-
+    },
+    {
+      rootMargin: "0px 0px -200px 0px"
+    }
+  );
     if (timeline) {
       observor.observe(timeline);
     }
