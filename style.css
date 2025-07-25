@@ -50,9 +50,34 @@ html {
   width: 100%;
 }
 
-#menu-home {
-  position: relative;
-  top: 30%;
+#menu-home, #menu-about, #menu-experience, #menu-projects {
+  transition: all 1.5s ease;
+  transform: translateY(-150px);
+  opacity: 0;
+}
+
+#menu-home.active-menu {
+  transition: all 1.5s ease 0.6s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#menu-about.active-menu {
+  transition: all 1.5s ease 0.4s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#menu-experience.active-menu {
+  transition: all 1.5s ease 0.2s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#menu-projects.active-menu {
+  transition: all 1.5s ease;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .nav-left {

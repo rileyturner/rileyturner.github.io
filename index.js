@@ -59,6 +59,22 @@ function openNav() {
   let line1 = document.getElementsByClassName("line1")[0]
   let line2 = document.getElementsByClassName("line2")[0]
   let navbar = document.getElementsByClassName("navbar")[0]
+  let menuHome = document.getElementById('menu-home')
+  let menuAbout = document.getElementById('menu-about')
+  let menuExperience = document.getElementById('menu-experience')
+  let menuProjects = document.getElementById('menu-projects')
+
+  menuHome.style.transform = ""
+  menuHome.style.opacity = ""
+
+  menuAbout.style.transform = ""
+  menuAbout.style.opacity = ""
+
+  menuExperience.style.transform = ""
+  menuExperience.style.opacity = ""
+
+  menuProjects.style.transform = ""
+  menuProjects.style.opacity = ""
 
   if (!isToggled) {
     line1.style.transform = "rotate(45deg) translateX(6px)"
@@ -70,5 +86,9 @@ function openNav() {
     isToggled = false
   }
 
-  navbar.classList.toggle('active-menu');
+  navbar.classList.toggle('active-menu')
+  menuHome.classList.toggle('active-menu')
+  menuAbout.classList.toggle('active-menu')
+  menuExperience.classList.toggle('active-menu')
+  menuProjects.classList.toggle('active-menu')
 }
