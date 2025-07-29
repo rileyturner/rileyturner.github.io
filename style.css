@@ -42,7 +42,7 @@ html {
   width: 0;
   right: 0;
   height: 115px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   transition: all 1.5s ease;
 }
 
@@ -50,7 +50,10 @@ html {
   width: 100%;
 }
 
-#menu-home, #menu-about, #menu-experience, #menu-projects {
+#menu-home,
+#menu-about,
+#menu-experience,
+#menu-projects {
   transition: all 1.5s ease;
   transform: translateY(-150px);
   opacity: 0;
@@ -263,7 +266,8 @@ body {
   display: inline-block;
   font-size: 5em;
   padding-top: 0.5em;
-  /* padding-bottom: 0.5em; */
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .title.inView {
@@ -271,6 +275,11 @@ body {
 }
 
 #intro {
+  display: inline-block;
+  background-color: #9BB0AF;
+}
+
+#intro-content {
   display: inline-block;
   background-color: #9BB0AF;
   padding: 2em 20% 6em 20%;
@@ -412,47 +421,77 @@ body {
 
 /* PROJECTS */
 
+#projects {
+  padding: 2em 20% 6em 20%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.project-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+  height: auto;
+  background-color: red;
+  padding: 1em;
+  flex-direction: column;
+}
+
+.first-row,
+.second-row {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+}
+
+.project {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(253, 244, 231);
+  border-radius: 5px;
+}
+
 /* MISC. */
 
 .custom-shape-divider-top-1753335391 {
-    position: absolute;
-    z-index: 2;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .custom-shape-divider-top-1753335391 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 70px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
 }
 
 .custom-shape-divider-top-1753335391 .shape-fill {
-    fill: #749695;
+  fill: #749695;
 }
 
 .custom-shape-divider-top-1753371668 {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .custom-shape-divider-top-1753371668 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 67px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 67px;
 }
 
 .custom-shape-divider-top-1753371668 .shape-fill {
-    fill: #9BB0AF;
+  fill: #9BB0AF;
 }
 
 /* KEYFRAMES */
