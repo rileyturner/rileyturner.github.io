@@ -92,3 +92,22 @@ function openNav() {
   menuExperience.classList.toggle('active-menu')
   menuProjects.classList.toggle('active-menu')
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  let projects = document.querySelectorAll(".project");
+
+  console.log(projects)
+  projects.forEach(project => {
+    project.addEventListener('mouseover', () => {
+      project.style.transform = "scale(1.05)";
+      console.log("project item hovered")
+    })
+  })
+
+  projects.forEach(project => {
+    project.addEventListener('mouseout', () => {
+      project.style.transform = "scale(1)"
+      console.log("project item no longer hovered")
+    })
+  })
+})
