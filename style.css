@@ -427,6 +427,10 @@ body {
   box-sizing: border-box;
 }
 
+.projects-section {
+  background-color: #9BB0AF;
+}
+
 .project-wrapper {
   display: flex;
   justify-content: center;
@@ -482,6 +486,7 @@ body {
   color: rgb(251, 233, 208);
   width: 100%;
   padding-bottom: 5em;
+  font-size: 1.2em;
 }
 
 .project-description h3 {
@@ -530,6 +535,26 @@ body {
 
 .custom-shape-divider-top-1753371668 .shape-fill {
   fill: #9BB0AF;
+}
+
+.custom-shape-divider-top-1753855742 {
+    position: relative;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1753855742 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 113px;
+}
+
+.custom-shape-divider-top-1753855742 .shape-fill {
+    fill: #749695;
 }
 
 /* KEYFRAMES */
